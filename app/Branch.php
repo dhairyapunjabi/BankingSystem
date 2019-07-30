@@ -17,6 +17,6 @@ class Branch extends Model
   ];
   public function bank()
   {
-    return $this->belongsTo('App\Branch');
+    return $this->belongsTo('App\Bank');
   }
 }
