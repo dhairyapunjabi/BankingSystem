@@ -13,4 +13,9 @@ class Bank extends Model
     protected $fillable = [
       'name'
     ];
+
+    public function branchs()
+    {
+        return $this->hasMany('App\Branch');
+    }
 }
