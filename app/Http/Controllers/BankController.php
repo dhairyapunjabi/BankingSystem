@@ -37,13 +37,11 @@ class BankController extends Controller
   public function store(Request $request)
   {
     //
-    echo "hi";
     $validatedData = $request->validate( Bank::$createRules );
-    return $validatedData;
     $bank = new Bank([
-      'name' => $validatedData()->get( 'name' )
+      'name' => $request->name
     ]);
-    $bank->save;
+    $bank->save();
   }
 
   /**
