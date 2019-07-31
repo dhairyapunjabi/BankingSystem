@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::resource('banks', 'BankController')->only([
   'create', 'store'
 ]);
+
+Route::resource('branchs', 'BranchController')->only([
+  'create', 'store'
+]);
