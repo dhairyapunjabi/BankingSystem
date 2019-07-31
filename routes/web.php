@@ -19,6 +19,6 @@ Route::resource('banks', 'BankController')->only([
   'create', 'store'
 ]);
 
-Route::resource('branchs', 'BranchController')->only([
+Route::resource('branches', 'BranchController')->only([
   'create', 'store'
 ]);

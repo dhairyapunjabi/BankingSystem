@@ -1,11 +1,10 @@
 <?php
 
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBranchsTable extends Migration
+class CreateBranchesTable extends Migration
 {
   /**
    * Run the migrations.
@@ -14,13 +13,13 @@ class CreateBranchsTable extends Migration
    */
   public function up()
   {
-    Schema::create('branchs', function (Blueprint $table) {
+    Schema::create('branches', function (Blueprint $table) {
       $table->bigIncrements('id');
       $table->string('address');
       $table->string('IFSC');
       $table->bigInteger('bank_id')->unsigned();
       $table->foreign('bank_id')->references('id')->on('banks')
-            ->onDelete('cascade');
+        ->onDelete('cascade');
       $table->timestamps();
     });
   }
@@ -32,6 +31,6 @@ class CreateBranchsTable extends Migration
    */
   public function down()
   {
-    Schema::dropIfExists('branchs');
+    Schema::dropIfExists('branches');
   }
 }
