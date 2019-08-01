@@ -54,10 +54,10 @@ class BranchController extends Controller
    * @param  \App\Branch  $branch
    * @return \Illuminate\Http\Response
    */
-  public function show(Branch $branch)
-  {
-    //
-  }
+  //public function show(Branch $branch)
+  //{
+    ////
+  //}
 
   /**
    * Show the form for editing the specified resource.
